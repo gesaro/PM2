@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="communicationProtocol1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FST-CT-ZWs">
+                                <rect key="frame" x="107" y="432" width="200" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Selecciona una Opción"/>
+                                <connections>
+                                    <action selector="btnSendSecondController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Azv-BT-6rf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KR5-4k-Qw1">
+                                <rect key="frame" x="176" y="102" width="63" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FST-CT-ZWs" secondAttribute="trailing" constant="107" id="1Ea-Pp-BSJ"/>
+                            <constraint firstItem="KR5-4k-Qw1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="176" id="BBj-0j-p71"/>
+                            <constraint firstItem="FST-CT-ZWs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="388" id="gQz-iP-8f3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KR5-4k-Qw1" secondAttribute="trailing" constant="175" id="hRC-4W-BgP"/>
+                            <constraint firstItem="FST-CT-ZWs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="svW-cI-WI8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FST-CT-ZWs" secondAttribute="bottom" constant="394" id="v8p-lS-ERG"/>
+                            <constraint firstItem="KR5-4k-Qw1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="58" id="yLg-0r-kJW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblOptionSelected" destination="KR5-4k-Qw1" id="f3C-BE-ZOx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="108"/>
+        </scene>
+        <!--Selection Controller-->
+        <scene sceneID="ivV-4m-NBm">
+            <objects>
+                <viewController storyboardIdentifier="SelectionController" id="NtC-nE-Ho6" customClass="SelectionController" customModule="communicationProtocol1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pgs-y5-9SL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gt5-Nl-OgZ">
+                                <rect key="frame" x="156" y="163" width="105" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Boton verde"/>
+                                <connections>
+                                    <action selector="greenOptionSelected:" destination="NtC-nE-Ho6" eventType="touchUpInside" id="ZQ9-PP-VrN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUf-UB-hWk">
+                                <rect key="frame" x="164" y="260" width="89" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Boton rojo"/>
+                                <connections>
+                                    <action selector="redOptionSelected:" destination="NtC-nE-Ho6" eventType="touchUpInside" id="j93-Nv-A18"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TG5-Uu-2Dg">
+                                <rect key="frame" x="147" y="351" width="123" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Boton morado"/>
+                                <connections>
+                                    <action selector="purpleOptionSelected:" destination="NtC-nE-Ho6" eventType="touchUpInside" id="jZZ-Jw-X96"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="TG5-Uu-2Dg" firstAttribute="leading" secondItem="EnY-Kd-c5k" secondAttribute="leading" constant="147" id="C5P-mh-EzP"/>
+                            <constraint firstItem="EnY-Kd-c5k" firstAttribute="trailing" secondItem="VUf-UB-hWk" secondAttribute="trailing" constant="161" id="I4f-gK-rRk"/>
+                            <constraint firstItem="EnY-Kd-c5k" firstAttribute="trailing" secondItem="TG5-Uu-2Dg" secondAttribute="trailing" constant="144" id="Nu6-bN-MHo"/>
+                            <constraint firstItem="VUf-UB-hWk" firstAttribute="leading" secondItem="EnY-Kd-c5k" secondAttribute="leading" constant="164" id="WHM-b1-R4b"/>
+                            <constraint firstItem="gt5-Nl-OgZ" firstAttribute="top" secondItem="EnY-Kd-c5k" secondAttribute="top" constant="119" id="WdG-t1-VU8"/>
+                            <constraint firstItem="EnY-Kd-c5k" firstAttribute="trailing" secondItem="gt5-Nl-OgZ" secondAttribute="trailing" constant="153" id="Zbp-c4-Peb"/>
+                            <constraint firstItem="gt5-Nl-OgZ" firstAttribute="leading" secondItem="EnY-Kd-c5k" secondAttribute="leading" constant="156" id="bqc-dA-7k6"/>
+                            <constraint firstItem="TG5-Uu-2Dg" firstAttribute="top" secondItem="VUf-UB-hWk" secondAttribute="bottom" constant="55" id="gRI-UI-187"/>
+                            <constraint firstItem="EnY-Kd-c5k" firstAttribute="bottom" secondItem="TG5-Uu-2Dg" secondAttribute="bottom" constant="475" id="hPY-w4-EWb"/>
+                            <constraint firstItem="VUf-UB-hWk" firstAttribute="top" secondItem="gt5-Nl-OgZ" secondAttribute="bottom" constant="61" id="q5z-RS-y8t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EnY-Kd-c5k"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dqd-yy-BXx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="823" y="106"/>
+        </scene>
+    </scenes>
+</document>
